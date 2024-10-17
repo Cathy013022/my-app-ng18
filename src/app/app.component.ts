@@ -5,7 +5,7 @@ import { HelloComponent } from './hello/hello.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HelloComponent],
+  imports: [RouterOutlet, HelloComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
