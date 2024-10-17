@@ -12,8 +12,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 })
 export class HelloComponent implements OnInit {
  
-  isportal =true;
-  ismobile= false;
+  isportal =true; 
 
   constructor(
     private responsive: BreakpointObserver
@@ -21,12 +20,11 @@ export class HelloComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.responsive.observe(Breakpoints.HandsetPortrait)  //最大寬度600
+    this.responsive.observe([Breakpoints.HandsetPortrait]) //最大寬度600 
       .subscribe(result => {
 
         if (result.matches) { 
-          this.isportal =false
-          this.ismobile= true;
+          this.isportal =false 
         }
 
       });

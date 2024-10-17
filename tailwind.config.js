@@ -4,8 +4,14 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      'sm': '600px', 
+      'portal': '600px', 
     },
+    wrapper:{
+      width:{
+        default:'100%',
+        portal:'1200px' 
+      }
+    }
   },
   plugins: [],
 }
