@@ -1,15 +1,19 @@
 
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-hello',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './hello.component.html',
   styleUrl: './hello.component.scss'
 })
 export class HelloComponent implements OnInit {
+ 
+  isportal =true;
+  ismobile= false;
 
   constructor(
     private responsive: BreakpointObserver
@@ -17,10 +21,12 @@ export class HelloComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.responsive.observe(Breakpoints.HandsetPortrait)
+    this.responsive.observe(Breakpoints.HandsetPortrait)  //最大寬度600
       .subscribe(result => {
 
-        if (result.matches) {
+        if (result.matches) { 
+          this.isportal =false
+          this.ismobile= true;
         }
 
       });

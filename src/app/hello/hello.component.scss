@@ -1,4 +1,47 @@
 .header {
+    display: flex;
+    justify-content: center;
     height: 60px;
+    padding:  0 15px;
     background: #86e100;
+
+    &.is-portal{
+        height: 80px; 
+        padding: 0;
+        background: #000;
+    }
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    &.is-portal{
+        width: 1200px;
+    }
+}
+.logo{
+    width: 100px;
+    height: 60px;
+    background: url('../../assets/images/header/logo.png') no-repeat center/contain;
+}
+
+.language{
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/images/select-language/vi.png') no-repeat center/contain;
+}
+
+
+.p-header{
+    display: flex;
+  .login,.reg{
+    width: 120px;
+    height: 40px;
+    margin-right: 20px;
+    background: #e18300;
+    border-radius: 5px;
+}  
 }

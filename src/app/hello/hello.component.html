@@ -1,5 +1,18 @@
-<div class="header">
-    <div class="bar">
-        <i class="fas fa-bars text-2xl"></i>
+<div class="header" [ngClass]="{'is-portal':isportal}">
+    <div class="wrapper" [ngClass]="{'is-portal':isportal}">
+        <div class="bar" *ngIf="ismobile">
+            <i class="fas fa-bars text-2xl"></i>
+        </div>
+    
+        <div class="logo"></div>
+
+        <div class="p-header" *ngIf="isportal">
+            <div class="login">Login</div>
+            <div class="reg">register</div> 
+        </div> 
+        
+        <div class="language"></div> 
     </div>
+     
+    
 </div>

@@ -1,0 +1,21 @@
+.header{
+    @media (min-width: 640px) {
+        height: 80px;
+        padding: 0;
+        background-color: #000; 
+      }
+}
+
+.logo{ 
+    background: url('../../assets/images/header/logo.png') no-repeat center/contain;
+}
+.login,.reg{
+    width: 120px;
+    height: 40px;
+    margin-right: 20px;
+    background: #e18300;
+    border-radius: 5px;
+}  
+.language{ 
+    background: url('../../assets/images/select-language/vi.png') no-repeat center/contain;
+}
