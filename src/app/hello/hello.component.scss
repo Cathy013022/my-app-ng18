@@ -1,47 +1,89 @@
 .header {
-    display: flex;
-    justify-content: center;
-    height: 60px;
-    padding:  0 15px;
-    background: #86e100;
+  display: flex;
+  justify-content: center;
+  height: 54px;
+  padding: 0 15px;
+  background: #86e100;
 
-    &.is-portal{
-        height: 80px; 
-        padding: 0;
-        background: #000;
-    }
+  &.is-portal {
+    height: 56px;
+    padding: 0;
+    background: #e6e6e6;
+  }
+  &.is-tablet {
+    background: #e89d9d;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &.is-portal {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.language {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background: url("../../assets/images/select-language/vi.png") no-repeat
+    center/contain;
 }
 
-.wrapper{
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    padding: 0 15px;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 17px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    &.chat::before {
+      background: url("../../assets/images/header/chat.png");
+    }
+    &.login::before {
+      background: url("../../assets/images/header/login.png");
+    }
+    &.reg::before {
+      background: url("../../assets/images/header/reg.png");
+    }
+    + li {
+      border-left: 1px dotted #000;
+    }
+  }
+}
+.logo {
+  width: 100px;
+  height: 56px;
+  background: url("../../assets/images/header/logo.png") no-repeat
+    center/contain;
+}
+.bottom {
+  background: #272727;
+
+  .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    
-    &.is-portal{
-        width: 1200px;
+    width: 80%;
+    li {
+      margin-left: 5px;
+      color: #fff;
+      font-size: 14px;
     }
-}
-.logo{
-    width: 100px;
-    height: 60px;
-    background: url('../../assets/images/header/logo.png') no-repeat center/contain;
-}
-
-.language{
-    width: 20px;
-    height: 20px;
-    background: url('../../assets/images/select-language/vi.png') no-repeat center/contain;
-}
-
-
-.p-header{
-    display: flex;
-  .login,.reg{
-    width: 120px;
-    height: 40px;
-    margin-right: 20px;
-    background: #e18300;
-    border-radius: 5px;
-}  
+    &.is-tablet li {
+      font-size: 10px;
+    }
+  }
 }

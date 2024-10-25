@@ -1,18 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,ts}'],
+  content: ["./src/**/*.{html,ts}"],
   theme: {
     extend: {},
     screens: {
-      'portal': '600px', 
+      tablet: "600px",
+      portal: "1920px",
     },
-    wrapper:{
-      width:{
-        default:'100%',
-        portal:'1200px' 
-      }
-    }
+    wrapper: {
+      width: {
+        default: "100%",
+        portal: "1200px",
+      },
+    },
   },
   plugins: [],
-}
-
+};
